@@ -74,7 +74,7 @@ export default function ServicesPage() {
                       </div>
 
                       <Button asChild>
-                        <Link href="/contact">Request Quote for This Service</Link>
+                        <Link href="/contact">Contact Us</Link>
                       </Button>
                     </div>
                   </div>
@@ -124,14 +124,14 @@ export default function ServicesPage() {
 
       <CTASection
         title="Ready to Discuss Your Project?"
-        description="Contact us for a detailed consultation and quote tailored to your specific needs."
+        description="Contact us for detailed information tailored to your specific needs."
         primaryCTA={{
           text: "Get Started",
           href: "/contact",
         }}
         secondaryCTA={{
-          text: "View Our Credentials",
-          href: "/credentials",
+          text: "View Our Projects",
+          href: "/projects",
         }}
       />
     </main>

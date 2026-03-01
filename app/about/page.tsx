@@ -37,7 +37,7 @@ export default function AboutPage() {
                 <p>
                   GJA Construction Inc is a Pennsylvania-based operator with consistent ties to the
                   Glenside and Fort Washington area, specializing in petroleum and fueling infrastructure
-                  construction throughout the Philadelphia metro region.
+                  construction.
                 </p>
                 <p>
                   Our work centers on underground storage tank installation and removal, fuel station
@@ -111,49 +111,6 @@ export default function AboutPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-24">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                Public Record Anchors
-              </h2>
-              <p className="text-lg text-gray-600">
-                Our credentials and registrations are verifiable through official government sources
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {companyProfile.publicRecordAnchors.map((anchor, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 rounded-lg border bg-white p-6 shadow-sm"
-                >
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100">
-                    <CheckCircle2 className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="mb-1 text-lg font-semibold text-gray-900">
-                      {anchor.source}
-                    </h3>
-                    <p className="mb-2 text-gray-700">{anchor.detail}</p>
-                    <p className="text-sm text-gray-500">
-                      Verified: {anchor.verified}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button asChild variant="outline" size="lg">
-                <Link href="/credentials">View Full Credentials</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

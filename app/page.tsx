@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import CredibilityStrip from "@/components/CredibilityStrip";
 import {
   Fuel,
   Trash2,
@@ -36,7 +35,7 @@ export default function HomePage() {
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 sm:flex-row sm:justify-center duration-700 delay-300">
               <Button asChild size="lg" className="text-base">
-                <Link href="/contact">Request a Quote</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
               <Button
                 asChild
@@ -50,8 +49,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <CredibilityStrip />
 
       <section className="py-20 sm:py-28">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -152,7 +149,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-400" />
-                <span className="text-lg">DNREC certified UST installation contractor</span>
+                <span className="text-lg">Professional UST installation expertise</span>
               </div>
             </div>
 
@@ -184,12 +181,12 @@ export default function HomePage() {
               Ready to Start Your Project?
             </h2>
             <p className="mb-10 text-xl leading-relaxed text-gray-200">
-              Get a detailed proposal for your petroleum infrastructure project. Our team will review your requirements and provide a comprehensive quote with full compliance documentation.
+              Contact our team to discuss your petroleum infrastructure project. We'll review your requirements and provide detailed information with full compliance documentation.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="text-base">
-                <Link href="/contact">Request a Quote</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
               <Button
                 asChild
