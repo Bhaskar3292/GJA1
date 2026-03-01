@@ -122,18 +122,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTASection
-        title="Ready to Discuss Your Project?"
-        description="Contact us for a detailed consultation and quote tailored to your specific needs."
-        primaryCTA={{
-          text: "Get Started",
-          href: "/contact",
-        }}
-        secondaryCTA={{
-          text: "View Our Credentials",
-          href: "/credentials",
-        }}
-      />
+     
     </main>
   );
 }
