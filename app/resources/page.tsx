@@ -15,10 +15,16 @@ const resources = [
     category: "Compliance",
   },
   {
-    title: "Permit Application Checklist",
-    description: "Complete checklist of required documents and information for fuel station construction permits.",
+    title: "Philadelphia Permit Application Checklist",
+    description: "Complete checklist of required documents and information for fuel station construction permits in the City of Philadelphia.",
     type: "Checklist",
     category: "Permits",
+  },
+  {
+    title: "DNREC UST Contractor Certification",
+    description: "Information about Delaware DNREC contractor certification requirements and verification procedures for UST installation work.",
+    type: "Resource",
+    category: "Certification",
   },
   {
     title: "Underground Fuel Line Installation Standards",
@@ -37,6 +43,12 @@ const resources = [
     description: "Step-by-step procedures for safe underground storage tank removal and closure in compliance with environmental regulations.",
     type: "Checklist",
     category: "Compliance",
+  },
+  {
+    title: "USDOT Motor Carrier Safety Requirements",
+    description: "Overview of FMCSA safety requirements for construction contractors operating commercial vehicles for petroleum infrastructure projects.",
+    type: "Resource",
+    category: "Safety",
   },
   {
     title: "Project Documentation Best Practices",

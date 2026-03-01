@@ -8,7 +8,7 @@ export const companyProfile = {
 
   description: {
     short: "UST installation/removal, canopy builds, and fueling-site work with a compliance-first mindset.",
-    full: "Pennsylvania-based operator with consistent Glenside/Fort Washington ties. We specialize in petroleum and fueling infrastructure construction with a strong focus on safety, compliance, and quality execution.",
+    full: "Pennsylvania-based operator with consistent Glenside/Fort Washington ties and Philadelphia-area project activity. We specialize in petroleum and fueling infrastructure construction with a strong focus on safety, compliance, and quality execution.",
   },
 
   contact: {
@@ -20,10 +20,33 @@ export const companyProfile = {
       mailing: "PO Box 1118, Glenside, PA 19038",
       physical: "1243 Hazelwood Drive, Fort Washington, PA 19034",
     },
-    serviceArea: "Pennsylvania base (Glenside / Fort Washington) + surrounding areas",
+    serviceArea: "Pennsylvania base (Glenside / Fort Washington) + Philadelphia-focused activity",
   },
 
-  credentials: [],
+  credentials: [
+    {
+      id: "usdot",
+      name: "USDOT 2416527",
+      status: "Active",
+      description: "Federal Motor Carrier Safety Administration active carrier status",
+      expires: null,
+    },
+    {
+      id: "dnrec",
+      name: "DNREC UST Installation Contractor",
+      certNumber: "B0271",
+      status: "Active",
+      description: "Delaware DNREC Certified UST Installation Contractor",
+      expires: "04/30/2026",
+    },
+    {
+      id: "hic",
+      name: "Philadelphia HIC #36253",
+      status: "Active",
+      description: "Philadelphia Home Improvement Contractor License (verified February 2026)",
+      expires: null,
+    },
+  ],
 
   services: [
     {
@@ -101,11 +124,11 @@ export const companyProfile = {
     },
     {
       title: "Permitting-Aware Execution",
-      description: "Extensive experience navigating metro area permitting requirements and processes.",
+      description: "Extensive experience navigating Philadelphia metro permitting requirements and processes.",
     },
     {
-      title: "Professional UST Expertise",
-      description: "Specialized expertise in underground storage tank installation and compliance.",
+      title: "Certified UST Contractor",
+      description: "DNREC-certified for underground storage tank installation with active credentials.",
     },
     {
       title: "Reliable Scheduling & Communication",
@@ -115,7 +138,7 @@ export const companyProfile = {
 
   permitExamples: [
     {
-      address: "4000 Woodhaven Rd",
+      address: "4000 Woodhaven Rd, Philadelphia",
       date: "2021-11-24",
       description: "Replacement of sump pump underground lines and dispenser-related work at existing gas station",
       valuation: "$147,730",
@@ -123,7 +146,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "8837 Torresdale Ave",
+      address: "8837 Torresdale Ave, Philadelphia",
       date: "2023-06-29",
       description: "New UST installations (DEF and diesel/off-road diesel tanks), compliant with PADEP UST guidelines",
       valuation: "$100,000",
@@ -131,7 +154,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "1325 W Albanus St",
+      address: "1325 W Albanus St, Philadelphia",
       date: "2022-03-25",
       description: "Tank removal permit",
       valuation: "$10,000",
@@ -139,7 +162,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "6301 Castor Ave",
+      address: "6301 Castor Ave, Philadelphia",
       date: "2022-07-21",
       description: "Construction of freestanding canopy over gas dispensers",
       valuation: "$15,000",
@@ -147,7 +170,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "5200–12 Woodland Ave",
+      address: "5200–12 Woodland Ave, Philadelphia",
       date: "2016-03-18",
       description: "Removal and installation of underground fuel tanks at existing gasoline station",
       valuation: "N/A",
@@ -155,7 +178,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "1701 Cottman Ave",
+      address: "1701 Cottman Ave, Philadelphia",
       date: "2015-07-21",
       description: "Installation of 4,000-gallon tank and related fueling-site work",
       valuation: "N/A",
@@ -180,7 +203,23 @@ export const companyProfile = {
     "Reliability - On-time delivery and clear communication",
   ],
 
-  publicRecordAnchors: [],
+  publicRecordAnchors: [
+    {
+      source: "FMCSA SAFER",
+      detail: "USDOT 2416527 (Active)",
+      verified: "February 2026",
+    },
+    {
+      source: "Delaware DNREC",
+      detail: "Certified UST Installation Contractor B0271 (expires 04/30/2026)",
+      verified: "December 2025",
+    },
+    {
+      source: "Philadelphia License Board",
+      detail: "HIC #36253 (Active)",
+      verified: "February 2026",
+    },
+  ],
 
   stats: {
     permittedProjects: 37,

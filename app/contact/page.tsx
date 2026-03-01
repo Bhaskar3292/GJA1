@@ -59,11 +59,11 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">
-              Contact Us
+              Request a Quote
             </h1>
             <p className="text-xl text-gray-300">
-              Get in touch about your petroleum infrastructure project. Our team will review your
-              requirements and provide detailed information.
+              Get a detailed proposal for your petroleum infrastructure project. Our team will review your
+              requirements and provide a comprehensive quote.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
               ) : (
                 <div>
                   <h2 className="mb-6 text-3xl font-bold text-gray-900">
-                    Contact Form
+                    Request a Quote
                   </h2>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -154,7 +154,7 @@ export default function ContactPage() {
                         id="projectLocation"
                         name="projectLocation"
                         required
-                        placeholder="1234 Main St, City, State"
+                        placeholder="1234 Main St, Philadelphia, PA"
                       />
                     </div>
 
@@ -288,7 +288,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
-                    <span>You'll receive detailed information outlining scope and timeline</span>
+                    <span>You'll receive a detailed quote outlining scope and timeline</span>
                   </li>
                 </ul>
               </div>

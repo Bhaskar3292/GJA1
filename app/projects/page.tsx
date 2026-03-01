@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects & Permits | GJA Construction Inc",
-  description: "Track record of completed petroleum infrastructure projects and permit activity.",
+  description: "Track record of completed petroleum infrastructure projects and permit activity in the Philadelphia area.",
 };
 
 export default function ProjectsPage() {
@@ -19,7 +19,7 @@ export default function ProjectsPage() {
               Projects & Permits
             </h1>
             <p className="text-xl text-gray-300">
-              A track record of successful petroleum infrastructure projects
+              A track record of successful petroleum infrastructure projects in the Philadelphia metro area
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
               Permit Activity Timeline
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Consistent project activity since 2015 across fueling infrastructure work
+              Consistent project activity since 2015 across Philadelphia-area fueling infrastructure work
             </p>
           </div>
 
@@ -175,7 +175,7 @@ export default function ProjectsPage() {
                 </h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• PADEP UST compliance</li>
-                  <li>• Local permit coordination</li>
+                  <li>• Philadelphia permit coordination</li>
                   <li>• Regulatory documentation</li>
                   <li>• Code compliance verification</li>
                 </ul>
