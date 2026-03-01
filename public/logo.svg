@@ -1,0 +1,7 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="10" width="40" height="40" rx="4" fill="#2563EB" stroke="#1E40AF" stroke-width="2"/>
+  <path d="M15 20 L25 35 L35 20" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 35 L30 35" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <text x="55" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1F2937">GJA</text>
+  <text x="55" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#6B7280">CONSTRUCTION</text>
+</svg>
