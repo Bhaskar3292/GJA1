@@ -74,7 +74,7 @@ export default function ServicesPage() {
                       </div>
 
                       <Button asChild>
-                        <Link href="/contact">Request Quote for This Service</Link>
+                        <Link href="/contact">Contact Us</Link>
                       </Button>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
               Our Commitment to Compliance
             </h2>
             <p className="mb-8 text-lg text-gray-600">
-              Every project is executed with rigorous attention to Pennsylvania DEP UST guidelines,
+              Every project is executed with rigorous attention to DEP UST guidelines,
               DNREC standards, and all applicable federal, state, and local compliance requirements.
             </p>
             <div className="grid gap-6 sm:grid-cols-3">

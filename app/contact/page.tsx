@@ -154,7 +154,7 @@ export default function ContactPage() {
                         id="projectLocation"
                         name="projectLocation"
                         required
-                        placeholder="1234 Main St, Philadelphia, PA"
+                        placeholder="1234 Main St, City, State"
                       />
                     </div>
 

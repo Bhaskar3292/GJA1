@@ -8,7 +8,7 @@ export const companyProfile = {
 
   description: {
     short: "UST installation/removal, canopy builds, and fueling-site work with a compliance-first mindset.",
-    full: "Pennsylvania-based operator with consistent Glenside/Fort Washington ties and Philadelphia-area project activity. We specialize in petroleum and fueling infrastructure construction with a strong focus on safety, compliance, and quality execution.",
+    full: "Operator with consistent Glenside/Fort Washington ties and regional project activity. We specialize in petroleum and fueling infrastructure construction with a strong focus on safety, compliance, and quality execution.",
   },
 
   contact: {
@@ -20,7 +20,7 @@ export const companyProfile = {
       mailing: "PO Box 1118, Glenside, PA 19038",
       physical: "1243 Hazelwood Drive, Fort Washington, PA 19034",
     },
-    serviceArea: "Pennsylvania base (Glenside / Fort Washington) + Philadelphia-focused activity",
+    serviceArea: "Regional base (Glenside / Fort Washington) + metro-focused activity",
   },
 
   credentials: [
@@ -41,9 +41,9 @@ export const companyProfile = {
     },
     {
       id: "hic",
-      name: "Philadelphia HIC #36253",
+      name: "HIC #36253",
       status: "Active",
-      description: "Philadelphia Home Improvement Contractor License (verified February 2026)",
+      description: "Home Improvement Contractor License (verified February 2026)",
       expires: null,
     },
   ],
@@ -52,7 +52,7 @@ export const companyProfile = {
     {
       id: "ust-installation",
       title: "UST Installation & Replacement",
-      description: "Professional underground storage tank installation and replacement services compliant with Pennsylvania DEP and DNREC guidelines.",
+      description: "Professional underground storage tank installation and replacement services compliant with DEP and DNREC guidelines.",
       deliverables: [
         "New UST installations (gasoline, diesel, DEF)",
         "Tank replacement and upgrades",
@@ -124,7 +124,7 @@ export const companyProfile = {
     },
     {
       title: "Permitting-Aware Execution",
-      description: "Extensive experience navigating Philadelphia metro permitting requirements and processes.",
+      description: "Extensive experience navigating metro area permitting requirements and processes.",
     },
     {
       title: "Certified UST Contractor",
@@ -138,7 +138,7 @@ export const companyProfile = {
 
   permitExamples: [
     {
-      address: "4000 Woodhaven Rd, Philadelphia",
+      address: "4000 Woodhaven Rd",
       date: "2021-11-24",
       description: "Replacement of sump pump underground lines and dispenser-related work at existing gas station",
       valuation: "$147,730",
@@ -146,7 +146,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "8837 Torresdale Ave, Philadelphia",
+      address: "8837 Torresdale Ave",
       date: "2023-06-29",
       description: "New UST installations (DEF and diesel/off-road diesel tanks), compliant with PADEP UST guidelines",
       valuation: "$100,000",
@@ -154,7 +154,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "1325 W Albanus St, Philadelphia",
+      address: "1325 W Albanus St",
       date: "2022-03-25",
       description: "Tank removal permit",
       valuation: "$10,000",
@@ -162,7 +162,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "6301 Castor Ave, Philadelphia",
+      address: "6301 Castor Ave",
       date: "2022-07-21",
       description: "Construction of freestanding canopy over gas dispensers",
       valuation: "$15,000",
@@ -170,7 +170,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "5200–12 Woodland Ave, Philadelphia",
+      address: "5200–12 Woodland Ave",
       date: "2016-03-18",
       description: "Removal and installation of underground fuel tanks at existing gasoline station",
       valuation: "N/A",
@@ -178,7 +178,7 @@ export const companyProfile = {
       status: "Complete",
     },
     {
-      address: "1701 Cottman Ave, Philadelphia",
+      address: "1701 Cottman Ave",
       date: "2015-07-21",
       description: "Installation of 4,000-gallon tank and related fueling-site work",
       valuation: "N/A",
@@ -215,7 +215,7 @@ export const companyProfile = {
       verified: "December 2025",
     },
     {
-      source: "Philadelphia License Board",
+      source: "License Board",
       detail: "HIC #36253 (Active)",
       verified: "February 2026",
     },

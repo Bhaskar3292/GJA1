@@ -9,14 +9,14 @@ import type { Metadata } from "next";
 
 const resources = [
   {
-    title: "Pennsylvania UST Compliance Guide",
-    description: "Comprehensive overview of PADEP UST guidelines, regulatory requirements, and compliance best practices for underground storage tank projects in Pennsylvania.",
+    title: "UST Compliance Guide",
+    description: "Comprehensive overview of PADEP UST guidelines, regulatory requirements, and compliance best practices for underground storage tank projects.",
     type: "Guide",
     category: "Compliance",
   },
   {
-    title: "Philadelphia Permit Application Checklist",
-    description: "Complete checklist of required documents and information for fuel station construction permits in the City of Philadelphia.",
+    title: "Permit Application Checklist",
+    description: "Complete checklist of required documents and information for fuel station construction permits.",
     type: "Checklist",
     category: "Permits",
   },

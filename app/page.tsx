@@ -35,9 +35,6 @@ export default function HomePage() {
               UST installation, compliance-focused execution, and fueling site construction.
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 sm:flex-row sm:justify-center duration-700 delay-300">
-              <Button asChild size="lg" className="text-base">
-                <Link href="/contact">Request a Quote</Link>
-              </Button>
               <Button
                 asChild
                 size="lg"
@@ -80,7 +77,7 @@ export default function HomePage() {
                       UST Installation & Replacement
                     </h3>
                     <p className="text-gray-600">
-                      New underground storage tank installations and replacements compliant with Pennsylvania DEP and DNREC guidelines.
+                      New underground storage tank installations and replacements compliant with DEP and DNREC guidelines.
                     </p>
                   </div>
                 </div>
@@ -188,9 +185,6 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button asChild size="lg" className="text-base">
-                <Link href="/contact">Request a Quote</Link>
-              </Button>
               <Button
                 asChild
                 size="lg"

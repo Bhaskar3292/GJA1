@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Credentials & Compliance | GJA Construction Inc",
-  description: "Active certifications, licenses, and compliance credentials for GJA Construction Inc including USDOT, DNREC UST certification, and Philadelphia HIC license.",
+  description: "Active certifications, licenses, and compliance credentials for GJA Construction Inc including USDOT, DNREC UST certification, and HIC license.",
 };
 
 export default function CredentialsPage() {

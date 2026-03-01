@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | GJA Construction Inc",
-  description: "Pennsylvania-based petroleum infrastructure contractor with expertise in UST installation, fuel station construction, and compliance-oriented execution.",
+  description: "Petroleum infrastructure contractor with expertise in UST installation, fuel station construction, and compliance-oriented execution.",
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
               About GJA Construction Inc
             </h1>
             <p className="text-xl text-gray-300">
-              Pennsylvania-based petroleum infrastructure construction specialist
+              Petroleum infrastructure construction specialist
             </p>
           </div>
         </div>
@@ -35,9 +35,9 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-700">
                 <p>
-                  GJA Construction Inc is a Pennsylvania-based operator with consistent ties to the
+                  GJA Construction Inc is an operator with consistent ties to the
                   Glenside and Fort Washington area, specializing in petroleum and fueling infrastructure
-                  construction throughout the Philadelphia metro region.
+                  construction throughout the metro region.
                 </p>
                 <p>
                   Our work centers on underground storage tank installation and removal, fuel station
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <p>
                   With a track record spanning multiple years and dozens of permitted projects, we bring
                   proven expertise in navigating the complex regulatory landscape of petroleum
-                  infrastructure work in Pennsylvania.
+                  infrastructure work.
                 </p>
               </div>
             </div>

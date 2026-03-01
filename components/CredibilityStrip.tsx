@@ -13,7 +13,7 @@ const credibilityItems = [
   },
   {
     icon: CheckCircle2,
-    label: "Philadelphia Licensed",
+    label: "Licensed",
     sublabel: "HIC #36253",
   },
   {

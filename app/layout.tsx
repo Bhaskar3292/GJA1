@@ -9,15 +9,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'GJA Construction Inc | Petroleum Infrastructure Construction',
-  description: 'Pennsylvania-based petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution. Serving Philadelphia metro area.',
+  description: 'Petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution.',
   keywords: [
     'UST installation',
     'underground storage tank',
     'fuel station construction',
     'petroleum infrastructure',
     'canopy construction',
-    'Philadelphia contractor',
-    'Pennsylvania UST contractor',
     'DNREC certified',
     'fuel station canopy',
     'tank removal',
@@ -29,7 +27,7 @@ export const metadata: Metadata = {
     url: 'https://gjaconstruction.com',
     siteName: 'GJA Construction Inc',
     title: 'GJA Construction Inc | Petroleum Infrastructure Construction',
-    description: 'Pennsylvania-based petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution.',
+    description: 'Petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution.',
     images: [
       {
         url: '/logo.svg',
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'GJA Construction Inc | Petroleum Infrastructure Construction',
-    description: 'Pennsylvania-based petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution.',
+    description: 'Petroleum and fueling infrastructure contractor specializing in UST installation/removal, canopy construction, and compliance-oriented execution.',
     images: ['/logo.svg'],
   },
   robots: {

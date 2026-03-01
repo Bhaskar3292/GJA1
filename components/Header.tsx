@@ -76,9 +76,6 @@ export default function Header() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button asChild size="default">
-              <Link href="/contact">Request a Quote</Link>
-            </Button>
           </div>
 
           <button
@@ -141,13 +138,6 @@ export default function Header() {
                   </Link>
                 ))}
 
-              <div className="mt-4 border-t pt-4">
-                <Button asChild className="w-full">
-                  <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                    Request a Quote
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}

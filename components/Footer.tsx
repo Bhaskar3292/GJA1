@@ -50,17 +50,8 @@ export default function Footer() {
               Ready to start a project?
             </h3>
             <p className="mt-3 text-sm text-slate-600">
-              Request a quote and we’ll follow up with next steps.
+              Get in touch and we'll follow up with next steps.
             </p>
-
-            <div className="mt-5">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-              >
-                Request a Quote
-              </Link>
-            </div>
           </div>
         </div>
 
