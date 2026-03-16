@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -19,16 +19,12 @@ import { toast } from "sonner";
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [serviceNeeded, setServiceNeeded] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    formData.set("serviceNeeded", serviceNeeded);
-
+    const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
     try {
@@ -40,19 +36,15 @@ export default function ContactPage() {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) {
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast.success("Message sent successfully!", {
+          description: "We'll get back to you as soon as possible.",
+        });
+      } else {
         throw new Error("Failed to send message");
       }
-
-      setIsSubmitted(true);
-      form.reset();
-      setServiceNeeded("");
-
-      toast.success("Message sent successfully!", {
-        description: "We'll get back to you as soon as possible.",
-      });
     } catch (error) {
-      console.error("Contact form error:", error);
       toast.error("Failed to send message", {
         description: "Please try again or contact us directly.",
       });
@@ -70,9 +62,8 @@ export default function ContactPage() {
               Request a Quote
             </h1>
             <p className="text-xl text-gray-300">
-              Get a detailed proposal for your petroleum infrastructure project.
-              Our team will review your requirements and provide a comprehensive
-              quote.
+              Get a detailed proposal for your petroleum infrastructure project. Our team will review your
+              requirements and provide a comprehensive quote.
             </p>
           </div>
         </div>
@@ -89,8 +80,8 @@ export default function ContactPage() {
                     Thank You!
                   </h2>
                   <p className="mb-6 text-gray-600">
-                    Your message has been received. We&apos;ll review your project
-                    details and get back to you as soon as possible.
+                    Your message has been received. We'll review your project details and get back to
+                    you as soon as possible.
                   </p>
                   <Button onClick={() => setIsSubmitted(false)}>
                     Send Another Message
@@ -171,8 +162,8 @@ export default function ContactPage() {
                       <Label htmlFor="serviceNeeded">
                         Service Needed <span className="text-red-500">*</span>
                       </Label>
-                      <Select value={serviceNeeded} onValueChange={setServiceNeeded}>
-                        <SelectTrigger id="serviceNeeded">
+                      <Select name="serviceNeeded" required>
+                        <SelectTrigger>
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -183,11 +174,6 @@ export default function ContactPage() {
                           ))}
                         </SelectContent>
                       </Select>
-                      <input
-                        type="hidden"
-                        name="serviceNeeded"
-                        value={serviceNeeded}
-                      />
                     </div>
 
                     <div className="space-y-2">
@@ -217,7 +203,7 @@ export default function ContactPage() {
                       type="submit"
                       size="lg"
                       className="w-full"
-                      disabled={isSubmitting || !serviceNeeded}
+                      disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Submit Request"}
                     </Button>
@@ -227,22 +213,62 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-8 lg:col-span-2">
-              <div className="rounded-lg border bg-white p-6 shadow-sm">
-                <h3 className="mb-4 text-xl font-semibold text-gray-900">
+              <div>
+                <h3 className="mb-6 text-2xl font-bold text-gray-900">
                   Contact Information
                 </h3>
-                <div className="space-y-4 text-sm text-gray-700">
-                  <div className="flex items-start gap-3">
-                    <Phone className="mt-0.5 h-5 w-5 text-blue-600" />
-                    <span>{companyProfile.phone}</span>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
+                      <Phone className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                        Phone
+                      </p>
+                      <a
+                        href={`tel:${companyProfile.contact.phone.primary.replace(/[^0-9]/g, "")}`}
+                        className="text-gray-900 hover:text-blue-600"
+                      >
+                        {companyProfile.contact.phone.primary}
+                      </a>
+                      <br />
+                      <a
+                        href={`tel:${companyProfile.contact.phone.alternate.replace(/[^0-9]/g, "")}`}
+                        className="text-gray-900 hover:text-blue-600"
+                      >
+                        {companyProfile.contact.phone.alternate}
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Mail className="mt-0.5 h-5 w-5 text-blue-600" />
-                    <span>{companyProfile.email}</span>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
+                      <Mail className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                        Mailing Address
+                      </p>
+                      <p className="text-gray-900">
+                        {companyProfile.contact.address.mailing}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 text-blue-600" />
-                    <span>{companyProfile.address}</span>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
+                      <MapPin className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                        Physical Address
+                      </p>
+                      <p className="text-gray-900">
+                        {companyProfile.contact.address.physical}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -254,9 +280,7 @@ export default function ContactPage() {
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
-                    <span>
-                      We&apos;ll review your project details within 1-2 business days
-                    </span>
+                    <span>We'll review your project details within 1-2 business days</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
@@ -264,9 +288,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
-                    <span>
-                      You&apos;ll receive a detailed quote outlining scope and timeline
-                    </span>
+                    <span>You'll receive a detailed quote outlining scope and timeline</span>
                   </li>
                 </ul>
               </div>
