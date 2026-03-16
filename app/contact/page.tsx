@@ -12,8 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { companyProfile, serviceOptions } from "@/lib/companyProfile";
-import { Phone, Mail, MapPin, CheckCircle2 } from "lucide-react";
+import { serviceOptions } from "@/lib/companyProfile";
+import { CircleCheck as CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 
 export default function ContactPage() {
@@ -131,7 +131,7 @@ export default function ContactPage() {
                           name="phone"
                           type="tel"
                           required
-                          placeholder="(215) 555-0123"
+                          placeholder="(555) 555-0123"
                         />
                       </div>
 
@@ -213,66 +213,6 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-8 lg:col-span-2">
-              <div>
-                <h3 className="mb-6 text-2xl font-bold text-gray-900">
-                  Contact Information
-                </h3>
-
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
-                      <Phone className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
-                        Phone
-                      </p>
-                      <a
-                        href={`tel:${companyProfile.contact.phone.primary.replace(/[^0-9]/g, "")}`}
-                        className="text-gray-900 hover:text-blue-600"
-                      >
-                        {companyProfile.contact.phone.primary}
-                      </a>
-                      <br />
-                      <a
-                        href={`tel:${companyProfile.contact.phone.alternate.replace(/[^0-9]/g, "")}`}
-                        className="text-gray-900 hover:text-blue-600"
-                      >
-                        {companyProfile.contact.phone.alternate}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
-                      <Mail className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
-                        Mailing Address
-                      </p>
-                      <p className="text-gray-900">
-                        {companyProfile.contact.address.mailing}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
-                      <MapPin className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-gray-600">
-                        Physical Address
-                      </p>
-                      <p className="text-gray-900">
-                        {companyProfile.contact.address.physical}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div className="rounded-lg border bg-blue-50 p-6">
                 <h4 className="mb-3 font-semibold text-gray-900">
                   What to Expect
