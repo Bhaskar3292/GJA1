@@ -171,10 +171,7 @@ export default function ContactPage() {
                       <Label htmlFor="serviceNeeded">
                         Service Needed <span className="text-red-500">*</span>
                       </Label>
-                      <Select
-                        value={serviceNeeded}
-                        onValueChange={setServiceNeeded}
-                      >
+                      <Select value={serviceNeeded} onValueChange={setServiceNeeded}>
                         <SelectTrigger id="serviceNeeded">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
