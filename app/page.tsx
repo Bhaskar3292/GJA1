@@ -13,7 +13,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover scale-110"
+          className="absolute inset-0 h-full w-full object-cover scale-125"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
