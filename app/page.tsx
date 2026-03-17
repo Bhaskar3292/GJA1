@@ -2,13 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import CredibilityStrip from "@/components/CredibilityStrip";
-import {
-  Fuel,
-  Trash2,
-  Building,
-  CheckCircle2,
-  Shield,
-} from "lucide-react";
+import { Fuel, Trash2, Building, CircleCheck as CheckCircle2, Shield } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -117,6 +111,107 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20 sm:py-28">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Our Work
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600">
+              Real projects showcasing our expertise in petroleum infrastructure construction, from underground tank installations to complete fueling station builds.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/Screenshot_2026-03-17_111604.png"
+                  alt="Underground storage tank installation with excavation and tank placement"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                  Underground Storage Tank Installation
+                </h3>
+                <p className="text-gray-600">
+                  Multi-tank UST installation with complete excavation, tank placement, and environmental protection systems.
+                </p>
+              </div>
+            </div>
+
+            <div className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/Screenshot_2026-03-17_111534.png"
+                  alt="Fuel station canopy construction with lift equipment"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                  Canopy Installation & Site Development
+                </h3>
+                <p className="text-gray-600">
+                  Complete fuel station canopy construction including structural installation and concrete work.
+                </p>
+              </div>
+            </div>
+
+            <div className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/Screenshot_2026-03-17_111633.png"
+                  alt="Concrete work and site preparation for fuel dispensers"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                  Dispenser Island Construction
+                </h3>
+                <p className="text-gray-600">
+                  Precision concrete work for fuel dispenser islands with proper grading and utility integration.
+                </p>
+              </div>
+            </div>
+
+            <div className="group overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/Screenshot_2026-03-17_111453.png"
+                  alt="Commercial building construction with fuel station infrastructure"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                  Full Site Development
+                </h3>
+                <p className="text-gray-600">
+                  Complete fueling station build including retail building, underground infrastructure, and site utilities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button asChild size="lg">
+              <Link href="/projects">View All Projects</Link>
+            </Button>
           </div>
         </div>
       </section>
