@@ -13,7 +13,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover scale-110"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -206,12 +206,6 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button asChild size="lg">
-              <Link href="/projects">View All Projects</Link>
-            </Button>
           </div>
         </div>
       </section>
