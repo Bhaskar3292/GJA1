@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import CTASection from "@/components/CTASection";
 import { companyProfile } from "@/lib/companyProfile";
-import { Fuel, Trash2, Building, SignpostBig, Wrench, Shield, CheckCircle2 } from "lucide-react";
+import { Fuel, Trash2, Building, SignpostBig, Wrench, Shield, CircleCheck as CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -122,7 +122,57 @@ export default function ServicesPage() {
         </div>
       </section>
 
-     
+      <section className="py-16 sm:py-24">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Field Execution in Action
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600">
+              Professional execution across all phases of petroleum infrastructure construction
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="/Screenshot_2026-03-17_111534.png"
+                alt="Canopy construction with aerial work platforms"
+                className="w-full h-64 object-cover"
+              />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-gray-900 mb-1">Canopy Installation</h3>
+                <p className="text-sm text-gray-600">Structural installation and assembly work</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="/Screenshot_2026-03-17_111604.png"
+                alt="Underground storage tank installation"
+                className="w-full h-64 object-cover"
+              />
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-gray-900 mb-1">UST Systems</h3>
+                <p className="text-sm text-gray-600">Underground tank and infrastructure work</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTASection
+        title="Ready to Start Your Project?"
+        description="Get expert petroleum infrastructure construction with full regulatory compliance."
+        primaryCTA={{
+          text: "Contact Us",
+          href: "/contact",
+        }}
+        secondaryCTA={{
+          text: "View Projects",
+          href: "/projects",
+        }}
+      />
     </main>
   );
 }

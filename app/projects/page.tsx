@@ -90,6 +90,65 @@ export default function ProjectsPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Recent Project Gallery
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600">
+              On-site documentation of active petroleum infrastructure construction projects
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 mb-16">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/Screenshot_2026-03-17_111534.png"
+                alt="Gas station canopy installation with workers on lift platforms"
+                className="w-full h-auto object-cover"
+              />
+              <div className="bg-white p-5">
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">Canopy Structure Installation</h3>
+                <p className="text-gray-600 text-sm">Commercial fuel station canopy construction with structural framing and platform work</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/Screenshot_2026-03-17_111604.png"
+                alt="Underground storage tank installation site with excavator"
+                className="w-full h-auto object-cover"
+              />
+              <div className="bg-white p-5">
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">Underground Tank Systems</h3>
+                <p className="text-gray-600 text-sm">UST installation with excavation, sheet piling, and heavy equipment operations</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/Screenshot_2026-03-17_111633.png"
+                alt="Commercial concrete work and site preparation"
+                className="w-full h-auto object-cover"
+              />
+              <div className="bg-white p-5">
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">Concrete & Site Work</h3>
+                <p className="text-gray-600 text-sm">Precision concrete finishing and grading for fuel station infrastructure</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/Screenshot_2026-03-17_111453.png"
+                alt="Commercial building construction with site development"
+                className="w-full h-auto object-cover"
+              />
+              <div className="bg-white p-5">
+                <h3 className="font-semibold text-lg text-gray-900 mb-2">Site Development Projects</h3>
+                <p className="text-gray-600 text-sm">Commercial facility construction including utilities and outdoor infrastructure</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
               Selected Permit Examples
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
