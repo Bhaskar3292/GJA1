@@ -1,73 +1,63 @@
-// components/Footer.tsx (or wherever your Footer.tsx lives)
-
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
-          {/* Brand */}
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt="GJA Construction Inc."
-                width={140}
-                height={40}
-                className="h-10 w-auto"
-                priority
-              />
-            </div>
-            <p className="mt-4 text-sm text-slate-600">
-              Safety • Compliance • Execution
+            <h3 className="mb-4 text-lg font-semibold text-white">
+              GJA Construction Inc
+            </h3>
+            <p className="text-sm">
+              Petroleum & Fueling Infrastructure Construction
             </p>
           </div>
 
-          {/* Links */}
           <div>
-            <h3 className="text-sm font-semibold text-slate-900">Quick Links</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 text-sm">
               <li>
-                <Link className="text-slate-600 hover:text-slate-900" href="/services">
+                <Link href="/services" className="hover:text-white">
                   Services
                 </Link>
               </li>
               <li>
-                <Link className="text-slate-600 hover:text-slate-900" href="/contact">
+                <Link href="/projects" className="hover:text-white">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="md:text-right">
-            <h3 className="text-sm font-semibold text-slate-900">
-              Ready to start a project?
-            </h3>
-            <p className="mt-3 text-sm text-slate-600">
-              Get in touch and we'll follow up with next steps.
-            </p>
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              Credentials
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>USDOT 2416527</li>
+              <li>DNREC Certified UST Contractor</li>
+              <li>HIC #36253</li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-slate-500">
-            © {year} GJA Construction Inc. All rights reserved.
-          </p>
-
-          <div className="flex gap-4 text-xs">
-            <Link className="text-slate-500 hover:text-slate-800" href="/privacy">
-              Privacy
-            </Link>
-            <Link className="text-slate-500 hover:text-slate-800" href="/terms">
-              Terms
-            </Link>
-          </div>
+        <div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm">
+          <p>&copy; {currentYear} GJA Construction Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
