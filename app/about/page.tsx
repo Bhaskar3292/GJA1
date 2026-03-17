@@ -1,7 +1,11 @@
-import { Shield, Target, Award, CircleCheck as CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import CTASection from "@/components/CTASection";
+import { companyProfile } from "@/lib/companyProfile";
+import { Shield, Target, Award, CheckCircle2 } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About | GJA Construction Inc",
   description: "Petroleum infrastructure contractor with expertise in UST installation, fuel station construction, and compliance-oriented execution.",
 };
@@ -48,6 +52,36 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+
+            <div className="mb-12 rounded-lg border bg-blue-50 p-8">
+              <h3 className="mb-4 text-center text-2xl font-bold text-gray-900">
+                Our Operational Base
+              </h3>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                    Mailing Address
+                  </p>
+                  <p className="text-gray-900">
+                    {companyProfile.contact.address.mailing}
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                    Physical Address
+                  </p>
+                  <p className="text-gray-900">
+                    {companyProfile.contact.address.physical}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 border-t border-blue-200 pt-6">
+                <p className="text-center text-gray-700">
+                  <span className="font-semibold">Service Area:</span>{" "}
+                  {companyProfile.contact.serviceArea}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -64,31 +98,16 @@ export default function AboutPage() {
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: Shield,
-                title: "Safety First - Every project, every day",
-              },
-              {
-                icon: CheckCircle2,
-                title: "Compliance - Meeting and exceeding regulatory requirements",
-              },
-              {
-                icon: Award,
-                title: "Quality Execution - Professional workmanship on every job",
-              },
-              {
-                icon: Target,
-                title: "Reliability - On-time delivery and clear communication",
-              },
-            ].map((value, index) => {
-              const Icon = value.icon;
+            {companyProfile.values.map((value, index) => {
+              const icons = [Shield, Target, Award, CheckCircle2];
+              const Icon = icons[index % icons.length];
+
               return (
                 <div key={index} className="text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
                     <Icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <p className="font-medium text-gray-900">{value.title}</p>
+                  <p className="text-gray-900 font-medium">{value}</p>
                 </div>
               );
             })}
@@ -101,7 +120,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl">
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                Verified Credentials
+                Public Record Anchors
               </h2>
               <p className="text-lg text-gray-600">
                 Our credentials and registrations are verifiable through official government sources
@@ -109,23 +128,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              {[
-                {
-                  source: "FMCSA SAFER",
-                  detail: "USDOT 2416527 (Active)",
-                  verified: "February 2026",
-                },
-                {
-                  source: "Delaware DNREC",
-                  detail: "Certified UST Installation Contractor B0271 (expires 04/30/2026)",
-                  verified: "December 2025",
-                },
-                {
-                  source: "License Board",
-                  detail: "HIC #36253 (Active)",
-                  verified: "February 2026",
-                },
-              ].map((anchor, index) => (
+              {companyProfile.publicRecordAnchors.map((anchor, index) => (
                 <div
                   key={index}
                   className="flex items-start gap-4 rounded-lg border bg-white p-6 shadow-sm"
@@ -144,6 +147,12 @@ export default function AboutPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Button asChild variant="outline" size="lg">
+                <Link href="/credentials">View Full Credentials</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -172,32 +181,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-blue-600 py-16 text-white">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-              Ready to Work Together?
-            </h2>
-            <p className="mb-6 text-lg text-blue-50">
-              Experience the difference of working with a contractor who prioritizes compliance, safety, and quality on every project.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-colors hover:bg-gray-100"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/projects"
-                className="rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-blue-600"
-              >
-                View Our Projects
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to Work Together?"
+        description="Experience the difference of working with a contractor who prioritizes compliance, safety, and quality on every project."
+        primaryCTA={{
+          text: "Contact Us",
+          href: "/contact",
+        }}
+        secondaryCTA={{
+          text: "View Our Projects",
+          href: "/projects",
+        }}
+      />
     </main>
   );
 }
